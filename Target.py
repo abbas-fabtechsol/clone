@@ -223,7 +223,7 @@ def login():
                 br.form['email'] = id 
 
                 br.form['pass'] = pwd 
-
+                
                 br.submit() 
 
                 url = br.geturl() 
